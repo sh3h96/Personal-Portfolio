@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shehab Shawqi | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&family=Outfit:wght@500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #050508;
@@ -29,6 +26,10 @@
             cursor: auto !important;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg);
             color: var(--text);
@@ -37,9 +38,7 @@
             overflow-x: hidden;
         }
 
-        h1,
-        h2,
-        h3 {
+        h1, h2, h3 {
             font-family: 'Syne', sans-serif;
             text-transform: uppercase;
             letter-spacing: -1px;
@@ -60,16 +59,10 @@
         }
 
         /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(var(--indigo), var(--pink));
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(var(--indigo), var(--pink)); 
             border-radius: 10px;
         }
 
@@ -110,39 +103,31 @@
             animation: load 2s ease-in-out forwards;
         }
 
-        @keyframes load {
-            to {
-                width: 100%;
-            }
-        }
+        @keyframes load { to { width: 100%; } }
 
         /* Premium Navigation Bar */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 25px 8%;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: var(--glass);
             backdrop-filter: blur(20px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
             transform: translateY(-100%);
             animation: slideDown 0.8s 2.2s forwards;
         }
 
-        @keyframes slideDown {
-            to {
-                transform: translateY(0);
-            }
-        }
+        @keyframes slideDown { to { transform: translateY(0); } }
 
         .logo {
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             letter-spacing: 2px;
             color: #fff;
             text-transform: uppercase;
@@ -151,16 +136,14 @@
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 40px;
+            margin-left: 30px;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
             transition: 0.3s;
         }
 
-        .nav-links a:hover {
-            color: #fff;
-        }
+        .nav-links a:hover { color: #fff; }
 
         .nav-links a::after {
             content: "";
@@ -173,9 +156,7 @@
             transition: 0.3s;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover::after { width: 100%; }
 
         /* Background Particle Canvas */
         #bg-canvas {
@@ -186,21 +167,11 @@
             pointer-events: none;
         }
 
-        /* Section Layout */
-        section {
-            padding: 120px 10%;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+        /* Sections */
+        section { padding: 100px 10%; min-height: 100vh; display: flex; align-items: center; }
 
         /* Hero Section Styling */
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
-            width: 100%;
-        }
+        .hero-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; width: 100%; }
 
         .avail-tag {
             display: inline-flex;
@@ -211,7 +182,7 @@
             color: var(--cyan);
             border: 1px solid rgba(6, 182, 212, 0.3);
             border-radius: 100px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             margin-bottom: 24px;
             text-transform: uppercase;
@@ -219,8 +190,8 @@
         }
 
         .shimmer-text {
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 0.9;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 1;
             margin-bottom: 20px;
             background: linear-gradient(90deg, #fff, var(--indigo), #fff);
             background-size: 200% auto;
@@ -229,26 +200,22 @@
             animation: shimmer 4s linear infinite;
         }
 
-        @keyframes shimmer {
-            to {
-                background-position: 200% center;
-            }
-        }
+        @keyframes shimmer { to { background-position: 200% center; } }
 
-        .job-title {
-            color: var(--cyan);
-            font-size: clamp(1rem, 3vw, 1.4rem);
-            margin-bottom: 40px;
+        .job-title { 
+            color: var(--cyan); 
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem); 
+            margin-bottom: 35px;
             font-weight: 500;
             opacity: 0.9;
         }
 
         .cta-btn {
-            padding: 18px 36px;
+            padding: 16px 32px;
             border-radius: 8px;
             border: none;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: 0.4s cubic-bezier(0.2, 0, 0.2, 1);
             cursor: pointer !important;
             background: var(--indigo);
@@ -273,26 +240,24 @@
 
         .hero-img-container {
             position: relative;
-            width: 340px;
-            height: 340px;
+            width: clamp(240px, 30vw, 340px);
+            height: clamp(240px, 30vw, 340px);
             animation: float 5s ease-in-out infinite;
         }
 
         .hero-img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             border-radius: 50%;
             z-index: 2;
             position: relative;
-            transform: scale(1.05) translate(0, -8%);
             filter: drop-shadow(0 20px 40px rgba(99, 102, 241, 0.4));
         }
 
         .orb-glow {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 120%;
             height: 120%;
@@ -313,48 +278,22 @@
             left: -5%;
         }
 
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-25px);
-            }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes float { 
+            0%, 100% { transform: translateY(0); } 
+            50% { transform: translateY(-20px); } 
         }
 
         /* Technical Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 60px;
-        }
-
-        .skill-item p {
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        
+        .skill-item p { font-weight: 600; font-size: 0.85rem; margin-bottom: 8px; color: var(--text-muted); }
 
         .skill-bar-bg {
-            height: 6px;
+            height: 5px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 100px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
         }
@@ -367,42 +306,30 @@
             border-radius: 100px;
         }
 
-        .chip-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 50px;
-        }
-
+        .chip-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
         .chip {
-            padding: 10px 22px;
+            padding: 8px 18px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 100px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
             transition: 0.4s;
             color: var(--text-muted);
         }
-
-        .chip:hover {
-            transform: translateY(-8px);
-            background: rgba(99, 102, 241, 0.1);
+        .chip:hover { 
+            transform: translateY(-5px); 
+            background: rgba(99, 102, 241, 0.1); 
             border-color: var(--indigo);
             color: #fff;
         }
 
         /* Project Cards Portfolio */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .project-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 35px;
-            border-radius: 20px;
+            padding: 25px;
+            border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: 0.4s;
             display: flex;
@@ -410,158 +337,88 @@
             position: relative;
             overflow: hidden;
         }
-
-        .project-card:hover {
-            transform: translateY(-12px);
+        .project-card:hover { 
+            transform: translateY(-10px); 
             background: rgba(255, 255, 255, 0.04);
             border-color: rgba(99, 102, 241, 0.3);
         }
-
-        .project-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--indigo), var(--pink));
-            transform: scaleX(0);
-            transition: 0.4s;
-            transform-origin: left;
-        }
-
-        .project-card:hover::before {
-            transform: scaleX(1);
-        }
+        .project-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--cyan); }
+        .project-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
 
         /* Timeline Styling */
-        .timeline {
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-            padding-left: 40px;
-        }
-
+        .timeline { border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px; }
         .experience-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 30px;
-            border-radius: 16px;
-            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
             transition: 0.4s;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            position: relative;
-            z-index: 1;
+            border: 1px solid rgba(255,255,255,0.03);
         }
+        .experience-card:hover { transform: translateX(10px); border-color: rgba(99, 102, 241, 0.2); }
 
-        .experience-card:hover {
-            transform: translateX(15px);
-            border-color: rgba(99, 102, 241, 0.2);
+        /* Languages Section Branding */
+        .lang-chip {
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: 0.3s;
         }
+        .lang-ar { background: rgba(255, 255, 255, 0.05); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .lang-en { background: rgba(6, 182, 212, 0.1); color: var(--cyan); border: 1px solid rgba(6, 182, 212, 0.3); }
 
-        /* Scroll Animation Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: 1s cubic-bezier(0.2, 0, 0.2, 1);
-        }
+        /* Contact Section Styling */
+        .contact-link { text-decoration: none; color: inherit; cursor: pointer !important; width: 100%; display: block; }
 
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Interactive Elements Ripple */
         .initials-circle {
-            width: 120px;
-            height: 120px;
+            width: 100px; height: 100px;
             background: var(--indigo);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Syne';
-            font-size: 2.8rem;
-            font-weight: 800;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 50px rgba(99, 102, 241, 0.4);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Syne'; font-size: 2.2rem; font-weight: 800;
+            position: relative; z-index: 2;
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
         }
 
         .ripple {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             border: 1px solid var(--indigo);
             border-radius: 50%;
             animation: ripple 4s linear infinite;
         }
+        @keyframes ripple { to { transform: scale(3); opacity: 0; } }
 
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
+        /* Scroll Animation Reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.2, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        .contact-link {
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer !important;
-            display: block;
-            position: relative;
-            z-index: 999;
-        }
-
-        /* Languages Section Branding */
-        .lang-chip {
-            padding: 10px 24px;
-            border-radius: 100px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-right: 15px;
-            transition: 0.3s;
-        }
-
-        /* Silver/Professional Branding for Arabic */
-        .lang-ar {
-            background: rgba(255, 255, 255, 0.05);
-            color: #e2e8f0;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .lang-en {
-            background: rgba(6, 182, 212, 0.1);
-            color: var(--cyan);
-            border: 1px solid rgba(6, 182, 212, 0.3);
-        }
-
-        /* Responsiveness Configuration */
+        /* --- MOBILE RESPONSIVENESS (RESIZE FIX) --- */
         @media (max-width: 900px) {
+            section { padding: 80px 5%; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+            .hero-img-wrapper { order: -1; margin-bottom: 20px; }
+            .shimmer-text { font-size: clamp(2.5rem, 10vw, 4rem); }
+            .nav-links { display: none; } /* Could add a hamburger later */
+            .logo { font-size: 1.1rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .initials-circle { width: 80px; height: 80px; font-size: 1.8rem; }
+        }
 
-            .hero-container,
-            .skills-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-img-wrapper {
-                margin-top: 40px;
-            }
-
-            nav {
-                padding: 20px 5%;
-            }
-
-            .nav-links {
-                display: none;
-            }
+        @media (max-width: 600px) {
+            .projects-grid { grid-template-columns: 1fr; }
+            .cta-btn { width: 100%; padding: 14px; }
+            .experience-card { padding: 20px; }
+            .logo { letter-spacing: 1px; }
         }
     </style>
 </head>
-
 <body>
 
     <div id="loader">
@@ -590,14 +447,13 @@
                 <span class="avail-tag">● Available for Innovation</span>
                 <h1 class="shimmer-text">Shehab<br>Shawqi</h1>
                 <p class="job-title">Full-Stack Developer | Computer Science Graduate</p>
-                <button class="cta-btn" onclick="scrollToSection('projects')">Explore My Work</button>
+                <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView()">Explore My Work</button>
             </div>
             <div class="hero-img-wrapper">
                 <div class="hero-img-container">
                     <div class="orb-glow"></div>
                     <div class="ring-dashed"></div>
-                    <img src="profile.png" alt="Shehab Shawqi" class="hero-img"
-                        onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Shehab'">
+                    <img src="profile.jpg" alt="Shehab Shawqi" class="hero-img" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Shehab'">
                 </div>
             </div>
         </div>
@@ -605,151 +461,61 @@
 
     <section id="skills" class="reveal">
         <div style="width: 100%;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 25px;">Technical Skills</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 25px;">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <p>Core Programming (Python, C++, Dart, PHP, JS)</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="92%"></div>
-                    </div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="92%"></div></div>
                     <p>Frameworks (Flutter, Flask, Unity Engine)</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="85%"></div>
-                    </div>
-                    <p>Modern Web Stack (HTML5, CSS3, REST APIs)</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="88%"></div>
-                    </div>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="85%"></div></div>
                 </div>
                 <div class="skill-item">
-                    <p>Artificial Intelligence & Computer Vision</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="82%"></div>
-                    </div>
-                    <p>Relational & NoSQL Data (SQL, MySQL, SQLite)</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="90%"></div>
-                    </div>
-                    <p>Embedded Tech & IoT (Arduino)</p>
-                    <div class="skill-bar-bg">
-                        <div class="skill-bar-fill" data-percent="80%"></div>
-                    </div>
+                    <p>AI, ML & Modern Web Stack</p>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="88%"></div></div>
+                    <p>Databases (SQL, MySQL, SQLite)</p>
+                    <div class="skill-bar-bg"><div class="skill-bar-fill" data-percent="90%"></div></div>
                 </div>
             </div>
             <div class="chip-cloud">
-                <div class="chip">Python</div>
-                <div class="chip">C++</div>
-                <div class="chip">C#</div>
-                <div class="chip">Java</div>
-                <div class="chip">Dart</div>
-                <div class="chip">PHP</div>
-                <div class="chip">JavaScript</div>
-                <div class="chip">Flutter</div>
-                <div class="chip">Flask</div>
-                <div class="chip">Unity Engine</div>
-                <div class="chip">AR Foundation</div>
-                <div class="chip">Machine Learning</div>
-                <div class="chip">Computer Vision</div>
-                <div class="chip">Image Processing</div>
-                <div class="chip">Arduino</div>
-                <div class="chip">SQL Server</div>
-                <div class="chip">MySQL</div>
-                <div class="chip">SQLite</div>
-                <div class="chip">Blender</div>
-                <div class="chip">Docker</div>
-                <div class="chip">Git/GitHub</div>
+                <div class="chip">Python</div><div class="chip">C++</div><div class="chip">C#</div><div class="chip">Java</div><div class="chip">Dart</div><div class="chip">PHP</div><div class="chip">JavaScript</div>
+                <div class="chip">Flutter</div><div class="chip">Flask</div><div class="chip">Unity</div><div class="chip">AR</div><div class="chip">ML</div><div class="chip">CV</div><div class="chip">Arduino</div><div class="chip">SQL</div><div class="chip">Docker</div><div class="chip">Git</div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="reveal">
         <div style="width: 100%;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Complete Projects Portfolio</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 40px;">Projects Portfolio</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3 style="color: var(--cyan); margin-bottom: 12px;">🛋️ AR Furniture Store</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Augmented reality
-                        graduation project built with Flutter, Unity (AR Foundation), and Flask.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">AR</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Flutter</span></div>
+                    <h3>🛋️ AR Furniture Store</h3>
+                    <p>Augmented reality graduation project built with Flutter, Unity, and Flask.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">AR</span><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">Flutter</span></div>
                 </div>
                 <div class="project-card">
-                    <h3 style="color: var(--cyan); margin-bottom: 12px;">📚 Library Management</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Full management system
-                        with SQL Server integration and admin dashboards.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">C#</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">SQL Server</span></div>
+                    <h3>📚 Library Management</h3>
+                    <p>Full management system with SQL Server integration and admin dashboards.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">C#</span><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">SQL</span></div>
                 </div>
                 <div class="project-card">
-                    <h3 style="color: var(--cyan); margin-bottom: 12px;">💰 Banking Logic System</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Console-based application
-                        for secure banking operations and complex data handling.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">C++</span></div>
-                </div>
-                <div class="project-card">
-                    <h3 style="color: var(--cyan); margin-bottom: 12px;">📰 News Web Platform</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Dynamic news platform
-                        with complete frontend and backend using PHP and JavaScript.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">PHP</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">JS</span></div>
+                    <h3>💰 Banking Logic</h3>
+                    <p>Console-based application for secure banking operations and complex data handling.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">C++</span></div>
                 </div>
                 <div class="project-card">
                     <h3>🎭 Face Recognition AI</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Python-based system
-                        detecting gender and age using advanced Computer Vision.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Python</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">CV</span></div>
+                    <p>Python system detecting gender and age using advanced Computer Vision.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">Python</span><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">CV</span></div>
                 </div>
                 <div class="project-card">
-                    <h3>🚥 Smart Lighting IoT</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Automated smart lighting
-                        system optimizing energy based on vehicle movement.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Arduino</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">IoT</span></div>
+                    <h3>🛒 Dukani Manager</h3>
+                    <p>Professional mobile manager for inventory and sales with local database.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">Flutter</span><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">SQLite</span></div>
                 </div>
                 <div class="project-card">
-                    <h3>🏙️ Image Classification ML</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Classifier for various
-                        environments using Keras and MobileNet architecture.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">ML</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Keras</span></div>
-                </div>
-                <div class="project-card">
-                    <h3>💻 Mini Compiler Engine</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Implemented fundamental
-                        compiler phases including lexer and syntax analyzer.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">C#</span></div>
-                </div>
-                <div class="project-card">
-                    <h3>🚗 Smart Car Prototype</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Mobile-controlled smart
-                        car utilizing Arduino and embedded systems logic.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Arduino</span></div>
-                </div>
-                <div class="project-card">
-                    <h3>🛒 Dukani Manager App</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Professional mobile
-                        manager for inventory and sales with local persistence.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Flutter</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">SQLite</span></div>
-                </div>
-                <div class="project-card">
-                    <h3>🎮 Flappy Nerd 2D</h3>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Mobile game developed
-                        with Unity Engine, focusing on collision and mechanics.</p>
-                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">Unity</span><span class="chip"
-                            style="padding: 5px 12px; font-size: 0.75rem;">C#</span></div>
+                    <h3>🚥 Smart Lighting</h3>
+                    <p>Automated smart lighting system optimizing energy based on vehicle movement.</p>
+                    <div class="chip-cloud" style="margin-top: auto; margin-bottom: 0; gap: 8px;"><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">Arduino</span><span class="chip" style="padding: 4px 10px; font-size: 0.7rem;">IoT</span></div>
                 </div>
             </div>
         </div>
@@ -757,17 +523,16 @@
 
     <section id="experience" class="reveal">
         <div style="width: 100%;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Education & Expertise</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 40px;">Education</h2>
             <div class="timeline">
                 <div class="experience-card">
-                    <h3 style="color: var(--cyan);">Bachelor's in Computer Science</h3>
-                    <p style="font-weight: 700; margin-bottom: 10px;">Al-Razi University, Yemen | Graduated 2026</p>
-                    <span class="avail-tag">GPA: 89.12 / 100</span>
+                    <h3 style="color: var(--cyan); font-size: 1.2rem;">Bachelor's in Computer Science</h3>
+                    <p style="font-weight: 700; margin-bottom: 10px; font-size: 0.9rem;">Al-Razi University | Graduated 2026</p>
+                    <span class="avail-tag" style="font-size: 0.65rem;">GPA: 89.12 / 100</span>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color: var(--cyan);">Advanced English Diploma</h3>
-                    <p style="font-weight: 700; margin-bottom: 20px;">For You American Institute | 2020 - 2022</p>
-                    <div style="display: flex; gap: 10px;">
+                    <h3 style="color: var(--cyan); font-size: 1.2rem;">Languages</h3>
+                    <div style="margin-top: 15px;">
                         <span class="lang-chip lang-ar">Arabic: Native</span>
                         <span class="lang-chip lang-en">English: Advanced</span>
                     </div>
@@ -779,7 +544,7 @@
     <section id="contact" class="reveal">
         <div class="hero-container">
             <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Let's Build Something</h2>
+                <h2 style="font-size: 2rem; margin-bottom: 30px;">Let's Build Something</h2>
                 <a href="mailto:shehabshawgi@gmail.com" class="contact-link">
                     <div class="experience-card">📧 shehabshawgi@gmail.com</div>
                 </a>
@@ -790,11 +555,10 @@
                 </a>
             </div>
             <div style="display: flex; justify-content: center; align-items: center;">
-                <div class="ripple-container">
+                <div style="position: relative;">
                     <div class="initials-circle">SS</div>
                     <div class="ripple" style="animation-delay: 0s"></div>
                     <div class="ripple" style="animation-delay: 1s"></div>
-                    <div class="ripple" style="animation-delay: 2s"></div>
                 </div>
             </div>
         </div>
@@ -815,41 +579,32 @@
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.color = ['#6366f1', '#ec4899', '#06b6d4', '#f59e0b'][Math.floor(Math.random() * 4)];
+                this.vx = (Math.random() - 0.5) * 0.4;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.color = ['#6366f1', '#ec4899', '#06b6d4'][Math.floor(Math.random() * 3)];
             }
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
             }
             draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
+                ctx.beginPath(); ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = this.color; ctx.fill();
             }
         }
 
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach((p, i) => {
-                p.update();
-                p.draw();
+                p.update(); p.draw();
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = p.x - particles[j].x;
-                    const dy = p.y - particles[j].y;
+                    const dx = p.x - particles[j].x, dy = p.y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.strokeStyle = p.color;
-                        ctx.globalAlpha = 1 - (dist / 120);
-                        ctx.lineWidth = 0.5;
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.stroke();
+                    if (dist < 100) {
+                        ctx.beginPath(); ctx.strokeStyle = p.color;
+                        ctx.globalAlpha = 1 - (dist / 100); ctx.lineWidth = 0.5;
+                        ctx.moveTo(p.x, p.y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke();
                     }
                 }
             });
@@ -858,20 +613,19 @@
 
         window.addEventListener('resize', initCanvas);
         initCanvas();
-        for (let i = 0; i < 100; i++) particles.push(new Particle());
+        for (let i = 0; i < 80; i++) particles.push(new Particle());
         animateParticles();
 
-        // Loader Fading
+        // Loader
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const loader = document.getElementById('loader');
-                loader.style.transition = '1s ease';
                 loader.style.opacity = '0';
                 setTimeout(() => loader.remove(), 1000);
-            }, 2000);
+            }, 1500);
         });
 
-        // Scroll Reveal logic
+        // Scroll Reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -883,21 +637,9 @@
                     }
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                scrollToSection(this.getAttribute('href').substring(1));
-            });
-        });
     </script>
 </body>
-
 </html>
